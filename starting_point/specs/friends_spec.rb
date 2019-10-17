@@ -74,14 +74,35 @@ class TestFriends < MiniTest::Test
   # 2. For a given person, return their favourite tv show
   # (e.g. the function favourite_tv_show(@person2) should return the string "Baywatch")
 
+def test_get_fave_TV_show__person2
+  result = favourite_tv_show(@person2)
+  assert_equal("Baywatch", result)
+end
+
+def test_get_fave_TV__how__person5
+  result = favourite_tv_show(@person5)
+  assert_equal("X-Files", result)
+end
 
   # 3. For a given person, check if they like a particular food
   # (e.g. the function likes_to_eat(@person2, "bread") should return true, likes_to_eat(@person3, "spinach") should return false)
+
+def test_likes_to_eat_person2
+  result = likes_to_eat(@person2, "bread")
+  assert_equal(true, result)
+end
+
+def test_likes_to_eat_person3
+  result = likes_to_eat(@person3, "spinach")
+  assert_equal(false, result)
+end
+
 
   # 4. For a given person, add a new name to their list of friends
   # (e.g. the function add_friend(@person2, "Scrappy-Doo") should add Scrappy-Doo to the friends.)
   # (hint: This function should not return anything. After the function call, check for the length of the friends array to test it!)
 
+def test_add_friend1
 
   # 5. For a given person, remove a specific name from their list of friends
   # (hint: Same as above, testing for the length of the array should be sufficient)
